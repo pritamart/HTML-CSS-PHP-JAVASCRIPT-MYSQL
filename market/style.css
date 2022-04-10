@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: aliceblue;
+    color: black;
+    background-image: url("flower-4985011.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container {
+    text-align: center;
+    background-image: linear-gradient(to bottom right, rgb(0, 195, 255), rgb(255, 255, 255));
+    margin: 20px 30% 3px 8%;
+    padding: 20px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 10px 10px 15px rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: 1.6rem;
+}
+
+.dimg {
+    display: flex;
+}
+
+img {
+    height: 70px;
+    padding: 14px;
+}
+
+pre {
+    font-size: 1.5rem;
+    margin-left: -20ox;
+    font-weight: bold;
+}
+
+#food {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 7px;
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.quantity {
+    font-size: 1.5rem;
+    border-radius: 5px;
+    width: 60px;
+    padding: 2px;
+    margin-left: 9px;
+}
+
+.btn {
+    height: 30px;
+    color: black;
+    background-color: bisque;
+    border-radius: 8px 8px 8px 0px;
+    padding: 5px 5px 15px 7px;
+    font-size: 1rem;
+    font-weight: bold;
+    /* box-shadow: 10px 10px 10px burlywood; */
+}
+
+.btn:hover {
+    box-shadow: inset 10px 10px 10px burlywood;
+}
+
+.rbtn {
+    height: 30px;
+    color: black;
+    background-color: bisque;
+    border-radius: 8px 8px 8px 0px;
+    padding: 5px 5px 15px 7px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 50px;
+    /* border: 1px solid brown; */
+}
+
+.rbtn:hover {
+    box-shadow: inset 10px 10px 10px burlywood;
+}
+
+.last {
+    text-align: center;
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), #245);
+    margin-top: 20px;
+    margin-left: -60%;
+    padding: 20px;
+    border: 2px solid rgb(53, 50, 50);
+    box-shadow: 10px 10px 15px rgb(0, 0, 0);
+    border-radius: 15px 0px 15px 0px;
+    font-size: 1.6rem;
+    height: 330px;
+    width: 463px;
+}
+
+.bill {
+    background-color: ghostwhite;
+    color: black;
+    width: 90px;
+    height: 35px;
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px -5px blue;
+    margin-top: 33%;
+}
+
+.all {
+    display: flex;
+    margin-top: 10%;
+}
+
+h4 {
+    margin-left: 15px;
+}

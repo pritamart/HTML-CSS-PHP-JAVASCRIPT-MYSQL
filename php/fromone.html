@@ -1,0 +1,30 @@
+<?php
+    if(isset($_POST['submit'])){
+        $username = $_POST['username'];
+        $userpassword = $_POST['userpassword'];
+        if(strlen($username) <= 8){
+            echo "error";
+        }
+    }
+
+?>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>from</title>
+    </head>
+
+    <body>
+        <form action="frimone.php" method="post">
+            User name: <input type="text" name="username"> <br> PassWord: <input type="password" name="userpassword">
+            <input type="submit" value="submit" name="submit">
+            <!-- <input type="button" name="reset" id="reset" value="reset"> -->
+        </form>
+
+    </body>
+
+    </html>

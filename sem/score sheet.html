@@ -1,0 +1,237 @@
+<html>
+
+<head>
+    <title> Score sheet </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="jscript.js"></script>
+</head>
+
+<body>
+    <table class="main">
+        <tr>
+            <td rowspan="2">
+                <center><img src="logo.png" height="150px"></center>
+            </td>
+            <td colspan="4">
+                <h1>St Xavier's college (Autonomous) Kolkata </h1>
+            </td>
+        </tr>
+        <tr>
+        </tr>
+        <tr class="header">
+            <div>
+                <td>
+                    <h4>Subjects</h4>
+                </td>
+                <td>
+                    <h4>About</h4>
+                </td>
+                <td>
+                    <h4>Exam Schedule</h4>
+                </td>
+                <td>
+                    <h4>Departments</h4>
+                </td>
+                <td>
+                    <h4>Contact Us</h4>
+                </td>
+            </div>
+        </tr>
+    </table>
+
+    <h2>Score Sheet </h2>
+    <br>
+
+    <table class="one">
+        <tr>
+            <td colspan="2">
+                <h2 style="font-size: larger;">Student Details</h2>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h3 class="label"> Name:</h3>
+            </td>
+            <td> <input type="text" id="name" placeholder="Enter your name"> </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <h3 class="label"> Roll:</h3>
+            </td>
+            <td> <input type="text" id="roll" placeholder="Enter your roll"> </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <h3 class="label"> Department:</h3>
+            </td>
+            <td> <input type="text" id="department" placeholder="Department name"> </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="ctr">
+                    <button type="button" class="submit" id="persButton" onclick="submitPersonal()">Submit</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="container" id="semSel">
+
+        <label for="sem1">Sem 1</label>
+        <input type="radio" class="rad" id="sem1" name="sem" value="0" onclick="updateSheet()" checked> &nbsp;&nbsp;&nbsp;
+
+        <label for="sem2">Sem 2</label>
+        <input type="radio" class="rad" id="sem2" name="sem" value="1" onclick="updateSheet()"> &nbsp;&nbsp;&nbsp;
+
+        <label for="sem3">Sem 3</label>
+        <input type="radio" class="rad" id="sem3" name="sem" value="2" onclick="updateSheet()"> &nbsp;&nbsp;&nbsp;
+        <label for="sem4">Sem 4</label>
+        <input type="radio" class="rad" id="sem4" name="sem" value="3" onclick="updateSheet()">
+
+    </div>
+    <br>
+
+    <table class="marksheet" id="marksheet">
+        <tr>
+            <th>Sl.no:</th>
+            <th>Paper Code:</th>
+            <th>FM:</th>
+            <th>QM:</th>
+            <th>SE:</th>
+            <th>GP:</th>
+            <th>Grade Letter:</th>
+        </tr>
+        <tr id="sub1">
+            <td>
+                <h3 class="results">1</h3>
+            </td>
+            <td>
+                <h3 class="results">MCMS0001</h3>
+            </td>
+            <td>
+                <div class="ctr"><input class="resip" type="text" id="fm01" value="100"></div>
+            </td>
+            <td>
+                <div class="ctr"><input class="resip" type="text" id="qm01" value="40"></div>
+            </td>
+            <td>
+                <div class="ctr"><input class="resip" type="text" id="se01"></div>
+            </td>
+            <td>
+                <h3 class="results" id="gp01">xx</h3>
+            </td>
+            <td>
+                <h3 class="results" id="gl01">x</h3>
+            </td>
+        </tr>
+        <tr id="sub2">
+            <td>
+                <h3 class="results">2</h3>
+            </td>
+            <td>
+                <h3 class="results">MCMS0002</h3>
+            </td>
+            <td>
+                <div class="ctr"><input class="resip" type="text" id="fm02" value="100"></div>
+            </td>
+            <td>
+                <div class="ctr"><input class="resip" type="text" id="qm02" value="40"></div>
+            </td>
+            <td>
+                <div class="ctr"><input class="resip" type="text" id="se02"></div>
+            </td>
+            <td>
+                <h3 class="results" id="gp02">xx</h3>
+            </td>
+            <td>
+                <h3 class="results" id="gl02">x</h3>
+            </td>
+        </tr>
+        <tr id="sub3">
+            <td>
+                <h3 class="results">3</h3>
+            </td>
+            <td>
+                <h3 class="results">MCMS0003</h3>
+            </td>
+            <td>
+                <div class="ctr"><input class="resip" type="text" id="fm03" value="100"></div>
+            </td>
+            <td>
+                <div class="ctr"><input class="resip" type="text" id="qm03" value="40"></div>
+            </td>
+            <td>
+                <div class="ctr"><input class="resip" type="text" id="se03"></div>
+            </td>
+            <td>
+                <h3 class="results" id="gp03">xx</h3>
+            </td>
+            <td>
+                <h3 class="results" id="gl03">x</h3>
+            </td>
+        </tr>
+        <tr id="sub4">
+            <td>
+                <h3 class="results">4</h3>
+            </td>
+            <td>
+                <h3 class="results">MCMS0004</h3>
+            </td>
+            <td>
+                <div class="ctr"><input class="resip" type="text" id="fm04" value="100"></div>
+            </td>
+            <td>
+                <div class="ctr"><input class="resip" type="text" id="qm04" value="40"></div>
+            </td>
+            <td>
+                <div class="ctr"><input class="resip" type="text" id="se04"></div>
+            </td>
+            <td>
+                <h3 class="results" id="gp04">xx</h3>
+            </td>
+            <td>
+                <h3 class="results" id="gl04">x</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <h3 class="results" style="text-align: left;padding-top: 20px;" id="sgpa">SGPA (excluding Foundation Course) = xx.xx</h3>
+            </td>
+            <td> <button type="button" class="calc" onclick="calculate()">Calculate</button></td>
+        </tr>
+    </table>
+    </table>
+
+    <button type="button" onclick="printWin()">Print</button>
+    <br>
+    <br>
+    <div class="leftdiv" id="legend1" style="visibility: hidden">
+        <h3 style="text-align: left; font-size: medium;">Legend:</h3>
+        <ul>
+            <li>FM : Full marks</li>
+            <li>QM : Qualifying marks</li>
+            <li>SE : Semester Examination marks</li>
+            <li>GP : Grade point</li>
+        </ul>
+    </div>
+    <div class="middlediv" id="legend2" style="visibility: hidden">
+        <h3 style="text-align: left; font-size: medium;">Grades:</h3>
+        <ul>
+            <li>O : Outstanding</li>
+            <li>A : Grade A</li>
+            <li>B : Grade B</li>
+            <li>C : Grade C</li>
+            <li>D : Grade D</li>
+            <li>E : Grade E</li>
+            <li>Arrear : Need to reappear for this paper</li>
+        </ul>
+    </div>
+    <h5 style="text-align: right;">Disclaimer: This website is not official and created for educational use</h5>
+</body>
+
+</html>

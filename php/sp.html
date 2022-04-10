@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ppp</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>php</legend>
+        <form action="" method="get">
+            <label for id="name" class="name">Netre your name</label>
+            <input type="text" name="name" class="name" placeholder="Your name" required="required">
+            <font style="color: red;">*</font>
+            <label for id="pass" class="pass">Pass Word</label>
+            <input type="password" name="puser">
+            <font style="color: red;">*</font>
+            <label for id="pemail" class="pemail">Enter your email</label>
+            <input type="email" id="email" class="email">
+            <input type="submit" id="submit" value="submit">
+            <input type="reset" id="reset" value="clear">
+
+        </form>
+    </fieldset>
+
+</body>
+
+</html>
+
+Your email address is:
+<?php echo $_POST["email"];
+ ?>

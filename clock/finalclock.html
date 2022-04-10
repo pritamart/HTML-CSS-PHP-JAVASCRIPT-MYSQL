@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="popupstyle.css">
+    <title>clock</title>
+    <script>
+        function openClock() {
+            w = (screen.width) / 2 - 100;
+            h = (screen.height) / 2 - 100;
+            myWin = open("p.html", "_blank", "width=550,height=320");
+            myWin.moveTo(w, h);
+            // window.close();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Digital clock
+        </h1>
+        <input type="button" value="Show Time" onClick="openClock()" class="button">
+    </div>
+    <!-- <script type="text/JavaScript"> -->
+
+
+</body>
+
+</html>

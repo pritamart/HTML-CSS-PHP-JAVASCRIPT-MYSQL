@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-eqiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>PAY SLIP</title>
+
+</head>
+
+<body>
+    <fieldset>
+
+        <legend>Pay Slip</legend>
+        <form class="frm" action="" method="post">
+            <label for id="simp" class="container">Employee Name:</label>
+            <input type="text" id="num1" placeholder="Enter your name" required="required">
+            <font color="red">*</font><br><br>
+            <label for id="simp1" class="container">Enter Basic Pay:</label>
+            <input type="number" id="num2" placeholder="1000/-" required="required">
+            <font color="red">*</font><br><br>
+            <p id="simp2">
+                <input type="submit" value="SUBMIT" onClick="DA()" class="simp3">
+                <input type="reset" value="CLEAR" onclick="re()" class="simp3" id="bnt">
+
+                <h2 id="DA"></h2>
+                <h2 id="hra"></h2>
+                <h2 id="PF"></h2>
+                <h2 id="GS"></h2>
+                <h2 id="NS"></h2>
+
+            </p>
+        </form>
+        </div>
+    </fieldset>
+    <script>
+        function DA() {
+            var x, y, DA, hra, PF, md, NS, GS;
+
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var md = parseInt(500);
+
+            if (x != null && y != null) {
+                DA = 0.03 * parseInt(y);
+                document.getElementById("DA").innerHTML = "DA = " + x + " is " + DA;
+                hra = 0.15 * parseInt(y);
+                document.getElementById("hra").innerHTML = "HRA of " + x + " is " + hra;
+                PF = 0.12 * parseInt(y);
+                document.getElementById("PF").innerHTML = "PF of " + x + " is " + PF;
+                GS = parseInt(y) + parseInt(DA) + parseInt(hra) + parseInt(md) + parseInt(PF);
+                document.getElementById("GS").innerHTML = "Gross salary of " + x + " is " + GS;
+                NS = parseInt(y) + parseInt(DA) + parseInt(hra) + parseInt(md);
+                document.getElementById("NS").innerHTML = "Net salary of " + x + " is " + NS;
+            } else {
+                document.getElementById("DA").innerHTML = "No number entered";
+            }
+            event.preventDefault();
+        }
+
+        function re() {
+
+            document.getElementById("DA").innerHTML = " ";
+            document.getElementById("hra").innerHTML = " ";
+
+            document.getElementById("PF").innerHTML = " ";
+
+            document.getElementById("GS").innerHTML = " ";
+
+            document.getElementById("NS").innerHTML = " ";
+
+
+        }
+    </script>
+
+    <body>
+
+</html>

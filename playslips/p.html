@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>pay</title>
+</head>
+
+<body>
+    <div class="bg-img"></div>
+    <div class="cointaner">
+
+        <fieldset>
+            <legend>playslip</legend>
+            <form>
+                <div class="name">
+
+                    <label for id="emp">Enter your name</label>
+
+                    <input type="text" id="num1" required="required" placeholder="Your fast name" class="name1">
+                    <font>*</font>
+                    <input type="text" id="num1" required="required" placeholder="Your last name" class="name1">
+                    <font>*</font>
+                </div>
+                <div class="payment">
+                    <label for id="pay">Enter Basic pay</label>
+                    <input type="number" id="salary" required="required" class="name1" value="1000">
+                </div>
+                <div class="button">
+                    <button type="submit" onclick="pay()" value="Submit" class="sub">Submit</button>
+                    <button type="submit" onclick="window.print()" value="Submit" class="print">print</button>
+                </div>
+
+            </form>
+
+        </fieldset>
+        <div id="tblResult"></div>
+    </div>
+    <script>
+        function pay() {
+            var salary = document.getElementById("salary").value;
+
+            var result = document.getElementById("tblResult");
+            var table = document.createElement("table");
+            table.id = "tbl1";
+            table.style.border = "1px solid black";
+            var tr = document.createElement("tr");
+            var td = document.createElement("td");
+            td.innerHTML = "Basic Pay";
+            tr.appendChild(td);
+
+            var td = document.createElement("td");
+            td.innerHTML = salary * 0.3;
+            tr.appendChild(td);
+
+            table.appendChild(tr);
+
+            tr = document.createElement("tr");
+            var td = document.createElement("td");
+            td.innerHTML = "Hra";
+            tr.appendChild(td);
+
+            var td = document.createElement("td");
+            td.innerHTML = salary * 0.2;
+            tr.appendChild(td);
+
+            table.appendChild(tr);
+            result.appendChild(table);
+
+        }
+    </script>
+</body>
+
+</html>

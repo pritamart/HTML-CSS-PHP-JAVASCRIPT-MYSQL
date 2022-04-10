@@ -1,0 +1,184 @@
+body {
+    background-color: wheat;
+}
+
+table.main {
+    width: 100%;
+    table-layout: fixed;
+    background-color: #245;
+    color: azure;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 10px 20px rgba(79, 133, 124, 0.6);
+}
+
+table.one {
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0px 10px 20px rgba(79, 133, 124, 0.6);
+}
+
+table.marksheet {
+    display: none;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    width: 90%;
+    padding: 1rem;
+    box-shadow: 0px 10px 20px rgba(79, 133, 124, 0.6);
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h3 {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    font-size: x-large;
+}
+
+h3.label {
+    word-wrap: normal;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+    margin-left: 40px;
+    font-size: large;
+}
+
+h3.results {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    font-size: large;
+}
+
+td {
+    margin-left: 0px;
+    border-radius: 10px;
+}
+
+button.submit {
+    width: 40%;
+    font-size: large;
+    font-weight: bold;
+    background-color: rgb(83, 160, 134);
+    border-radius: 10px;
+    border-left: auto;
+    border-right: auto;
+}
+
+button.submit:disabled {
+    color: black;
+}
+
+button.calc {
+    width: 100%;
+    height: 37px;
+    font-size: large;
+    font-weight: bold;
+    background-color: rgb(0, 224, 11);
+    border-radius: 5px;
+    border-left: auto;
+    border-right: auto;
+}
+
+div.ctr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+input {
+    border-radius: 5px;
+    border-width: 1px;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+input:disabled {
+    background-color: azure;
+    color: black;
+}
+
+input.resip {
+    border-radius: 5px;
+    border-width: 1px;
+    width: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+h4 {
+    color: blue;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+th {
+    background-color: bisque;
+    border-radius: 5px;
+}
+
+tr.header {
+    background-color: antiquewhite;
+}
+
+div.container {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 30px;
+    padding-left: 20px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 10px;
+    border-width: 2px;
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+    box-shadow: 0px 10px 20px rgba(79, 133, 124, 0.6);
+}
+
+.leftdiv {
+    float: left;
+}
+
+.middlediv {
+    float: left;
+}
+
+.rightdiv {
+    float: left;
+}
+
+label {
+    width: fit-content;
+}
+
+.header {
+    color: black;
+}

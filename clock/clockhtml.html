@@ -1,0 +1,69 @@
+﻿<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="clock.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Electrolize&family=Lobster&family=Orbitron&family=Shadows+Into+Light&family=Staatliches&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        window.onload = setInterval(clock);
+
+        function clock() {
+            var d = new Date();
+
+            var date = d.getDate();
+
+            var month = d.getMonth();
+            var montharr = ["January", "February", "March", "April", "May", "June", "July", "August", "Sepmber", "October", "November", "December"];
+            month = montharr[month];
+
+            var year = d.getFullYear();
+
+            var day = d.getDay();
+            var dayarr = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            day = dayarr[day];
+
+            var hour = d.getHours();
+            var min = d.getMinutes();
+            var sec = d.getSeconds();
+            hour = checkTime(hour)
+            min = checkTime(min)
+            sec = checkTime(sec)
+            if (hour < 12) {
+                document.getElementById("date").innerHTML = day + " " + date + " " + month + " " + year;
+                document.getElementById("message").innerHTML = "Wonderful Good Morning &#9829;&#9829;&#9829;";
+                document.getElementById("time").innerHTML = hour + ":" + min + ":" + sec;
+            } else if (hour < 18) {
+                document.getElementById("date").innerHTML = day + " " + date + " " + month + " " + year;
+                document.getElementById("message").innerHTML = "Very Good Afternoon 😀";
+                document.getElementById("time").innerHTML = hour + ":" + min + ":" + sec;
+            } else if (hour < 24) {
+                document.getElementById("date").innerHTML = day + " " + date + " " + month + " " + year;
+                document.getElementById("message").innerHTML = "Good night and  sweet dream &#9829; ";
+                document.getElementById("time").innerHTML = hour + ":" + min + ":" + sec;
+            }
+
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i
+                }
+                return i
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <b></b><br>
+        <p id="message"></p><br>
+        <p id="date"></p>
+        <p id="time"></p><br>
+        </b>
+    </div>
+
+</body>
+
+</html>

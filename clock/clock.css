@@ -1,0 +1,66 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(2, 2, 19);
+    text-align: center;
+    font-family: helvetica;
+    margin-left: auto;
+    padding: 30px;
+}
+
+#date {
+    margin-top: auto;
+    color: rgb(255, 255, 255);
+    font-family: 'Staatliches', cursive;
+    font-size-adjust: initial;
+    width: auto;
+    margin-left: auto;
+    transition: .5s;
+    transform: 0.04px;
+    letter-spacing: .01mm;
+    letter-spacing: .5mm;
+}
+
+#message {
+    margin-top: auto;
+    font-family: 'Henny Penny', cursive;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: inset 5px 5px 5px -15px #fff;
+    width: auto;
+    animation: change 5s ease infinite;
+}
+
+@keyframes change {
+    30% {
+        opacity: 0;
+    }
+}
+
+#time {
+    color: rgb(0, 255, 0);
+    font-size: large;
+    font-family: 'Electrolize', sans-serif;
+    font-weight: 400;
+    font: optional;
+    background-color: black;
+    border-radius: 20px;
+    padding: 0;
+    margin: 15%;
+    border: rgb(0, 255, 0) 2px solid;
+    box-shadow: 2px 2px 1px 1px rgb(0, 255, 0);
+}
+
+.container {
+    background-color: rgb(38, 39, 39);
+    height: 100%;
+    width: 100%;
+    margin: 1%;
+    background-color: black;
+    border-radius: 20px;
+    border: rgb(238, 231, 231) solid 2px;
+    padding: 5px;
+}

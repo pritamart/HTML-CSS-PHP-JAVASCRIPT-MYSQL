@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>marker</title>
+</head>
+
+<body>
+    <div class="all">
+
+        <div class="container ">
+
+            <!-- <legend> -->
+            <h1>Product Price</h1>
+            <div class="dimg">
+
+                <img src="mango.png" alt="mango">
+                <img src="17-banana-png-image.png" alt="banana">
+                <img src="7-orange-png-image-download.png" alt="orange">
+                <img src="45-tomato-png-image.png" alt="tomato">
+                <img src="15-green-grape-png-image.png" alt="grapes">
+            </div>
+            <div class="dh">
+                <pre class="mango">&#8377;10   &#8377;15   &#8377;24    &#8377;7      &#8377;1</pre>
+                <!-- <p class="banana">&#8377; 15</p>
+                <p class="orange">&#8377; 24</p>
+            <p class="tomato">&#8377; 7</p>
+            <p class="grapes">&#8377; 13</p> -->
+
+            </div>
+            <div class="all">
+                <br> Product name:
+                <!-- <input type="text" name="name" id="name" class="name" required placeholder=" Enter the product name"> -->
+                <label for="food">
+                <select id="food">
+                    <option value="mango">Mango </option>
+                    <option value="banana">Banana </option>
+                    <option value="orange">Orange </option>
+                    <option value="tamato">Tomato </option>
+                    <option value="grapes">Grapes </option>
+                </select>
+            </label>
+
+                <br><br>
+                <h4> Quantity</h4>
+                <input type="number" id="quantity" class="quantity" value="0">
+            </div>
+            <br>
+            <button onclick="add()" class="btn"> ADD to cart</button>
+            <input type="reset" value="reset" onclick="re()" class="rbtn">
+
+            <!-- </legend> -->
+            </fieldset>
+        </div>
+        <form action="indext.php" method="post">
+
+            <div class="last">
+
+                <div id="cart"></div><br>
+                <div id="totalprice" name="total">Total price 0</div><br>
+                <input type="submit" action="indext.php" value="Bill" class="bill">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var mp = 0;
+
+        function add() {
+            var name = document.getElementById("food").value;
+            // var price = document.getElementById("price").value;
+            var quantity = document.getElementById("quantity").value;
+            console.log(name, quantity, mp);
+
+            if (name == "mango") {
+
+                mp += quantity * 10;
+
+            }
+            if (name == "banana") {
+
+                mp += quantity * 15;
+            }
+            if (name == "orange") {
+
+                mp += (quantity * 24);
+            }
+            if (name == "tamato") {
+
+                mp += quantity * 7;
+            }
+            if (name == "grapes") {
+
+                mp += quantity * 1;
+            }
+            if (mp >= 0) {
+
+
+                document.getElementById("cart").innerHTML += "(" + quantity + " " + name + ")  ";
+                document.getElementById("totalprice").innerHTML = "Total price " + mp;
+            } else {
+                document.getElementById("totalprice").innerHTML = "Total price  0";
+            }
+
+
+        }
+
+        function re() {
+            document.getElementById("cart").innerHTML = "";
+
+            document.getElementById("quantity").value = 0;
+            document.getElementById("totalprice").innerHTML = "Total price  0";
+
+        }
+    </script>
+</body>
+
+</html>
