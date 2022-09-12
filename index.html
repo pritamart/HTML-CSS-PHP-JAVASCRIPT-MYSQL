@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+</head>
+
+<body>
+    <script></script>
+    <div class="container">
+        <h1>Calculator</h1>
+        <div class="calculator">
+            <input type="text" name="screen" id="screen" placeholder="0">
+
+            <table>
+                <tr>
+                    <td><button><span>&#8592;</span></button></td>
+                    <td><button>+/-</button></td>
+                    <td><button class="ac">AC</button></td>
+                    <td><button>%</button></td>
+                </tr>
+                <tr>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>X</button></td>
+                </tr>
+                <tr>
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td><button>-</button></td>
+                </tr>
+                <tr>
+                    <td><button>1</button></td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td><button>+</button></td>
+                </tr>
+                <tr>
+                    <td><button>0</button></td>
+                    <td><button>.</button></td>
+                    <td><button>/</button></td>
+                    <td><button>=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+<script src="index.js"></script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        text-align: center;
+        margin-top: 23px;
+    }
+    
+    table {
+        margin: auto;
+    }
+    
+    input {
+        font-size: 34px;
+        border: solid black 4px;
+        border-radius: 9px;
+        width: 471px;
+    }
+    
+    button {
+        font: size 50px;
+        background-color: rgb(199, 229, 250);
+        width: 117px;
+        height: 58px;
+        border-radius: 7px;
+    }
+    
+    .calculator {
+        /* border: solid black; */
+        background-color: rgb(128, 250, 250);
+        padding: 30px;
+        border-radius: 7px;
+        display: inline-block;
+        box-shadow: 8px 9px 8px rgb(182, 181, 184);
+    }
+    
+    .ac {
+        background-color: rgba(255, 30, 0, 0.945)
+    }
+</style>
+
+</html>
