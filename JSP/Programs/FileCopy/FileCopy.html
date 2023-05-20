@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome check using JSP</title>
+	<style>
+	table {
+		margin: auto;
+		width: 900px;
+		border: 4px solid skyblue;
+		padding: 5px;
+		background-color: lightgoldenrodyellow;
+		font-weight: bold;
+		border-radius: 15px;
+		font-size: 40px;
+	}
+
+	body {
+		background-color: lightseagreen;
+	}
+
+	h1 {
+		text-align: center;
+		font-family: Tahoma;
+		text-decoration: underline;
+		color: darkslateblue;
+		font-size: 100px;
+	}
+
+	button {
+		border-radius: 7px;
+		background-color: lightseagreen;
+		color: lightgoldenrodyellow;
+		font-family: Tahoma;
+		font-size: 40px;
+	}
+
+	input {
+		font-weight: bold;
+		size: 100 px;
+		font-size: 40px;
+	}
+	</style>
+</head>
+<body>
+	<form action="FileCopy.jsp" method="get">
+		<h1>File Copy using JSP</h1>
+
+		<br><br>
+
+		<table cellspacing="5px">
+			<tr>
+				<th align="right">Input file name<font color="red">*</font>:</th>
+				<th align="left"><input type="text" name="inputfile" required></th>
+			</tr>
+
+			<tr>
+				<th align="right">Output file name<font color="red">*</font>:</th>
+				<th align="left"><input type="text" name="outputfile" required></th>
+			</tr>
+
+			<tr>
+				<th colspan="2">
+					<button type="submit">COPY FILE</button>
+				</th>
+			</tr>
+
+			<tr>
+				<th colspan="2">
+					<button type="reset">RESET</button>
+				</th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

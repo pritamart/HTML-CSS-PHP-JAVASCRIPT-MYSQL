@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ColorChange</title>
+	<script type="text/javascript">
+		var colors = new Array("black", "green", "yellow", "red", "white", "blue", "pink", "black", "aqua");
+		var loop = true;		
+		
+		function colorChange() {
+			var length = colors.length;
+			var pos = Math.round(Math.random() * length);
+			document.fgColor = colors[pos];
+			document.bgColor = colors[(pos + 1) % length];
+			if (loop == true)
+				setTimeout("colorChange()", 1000);
+		}
+
+		function startColorChange() {
+			loop = true;
+			colorChange();
+		}
+
+		function stopColorChange() {
+			loop = false;
+		}
+	</script>
+
+	<style type="text/css">
+		div {
+			border: 6px solid DodgerBlue;
+			position: absolute;
+    		top: 25%;
+    		left: 35%;
+    		padding: 25px;
+			margin: 25px;
+			font-family: Times New Roman;
+			font-size: 60px;
+			text-align: center;
+		}
+
+		button {
+			background-color: maroon;
+			color: white;
+			border: 3px solid cyan;
+			text-align: center;
+			width: 150px;
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body bgcolor="lightgreen">
+	<div>
+		Hello World!
+	</div>
+
+	<button onclick="startColorChange();">Start color change</button>
+	<button onclick="stopColorChange();">Stop color change</button>
+</body>
+</html>

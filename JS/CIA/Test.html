@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BILLING SYSTEM</title>
+	<style>
+		table {
+			margin: auto;
+			width: 990px;
+			border: 4px solid skyblue;
+			padding: 5px;
+			background-color: lightgoldenrodyellow;
+			font-weight: bold;
+			border-radius: 10px;
+			font-size: 20px;
+		}
+
+		body {
+			background-color: lightseagreen;
+		}
+
+		button {
+			border-radius: 7px;
+			background-color: lightgoldenrodyellow;
+			font-family: Tahoma;
+			font-size: 20px;
+		}
+
+		input {
+			font-weight: bold;
+		}
+
+		select {
+			font-weight: bold;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function generateBill() {
+			var korth = 500;
+			var horowitzsahani = 400;
+			var harrypotter = 300;
+			var panchatantra = 150;
+			var mlagarwal = 500;
+			var rsagarwal = 450;
+			var galvin = 600;
+			var aesopsfables = 150;
+			var ahosethi = 400;
+			var sndey = 450;
+
+			var b1 = document.getElementById('book1').value;
+
+			var unitprice = 0;
+			if (b1 === "Korth")
+				unitprice = korth;
+			else if (b1 === "Horowitz Sahani")
+				unitprice = horowitzsahani;
+			else if (b1 === "Harry Potter")
+				unitprice = harrypotter;
+			else if (b1 === "Panchatantra")
+				unitprice = panchatantra;
+			else if (b1 === "ML Agarwal")
+				unitprice = mlagarwal;
+			else if (b1 === "RS Agarwal")
+				unitprice = rsagarwal;
+			else if (b1 === "Galvin")
+				unitprice = galvin;
+			else if (b1 === "Aesop's Fables")
+				unitprice = aesopsfables;
+			else if (b1 === "Aho Sethi")
+				unitprice = ahosethi;
+			else
+				unitprice = sndey;
+
+			document.getElementById("unitprice1").value = unitprice;
+
+			document.getElementById("price1").value = unitprice * parseInt(document.getElementById("quantity1").value);
+		}
+	</script>
+</head>
+<body>
+	<body>
+	<center>
+		<img src="Logo.png">
+	</center>
+
+	<h1 style="text-align: center; font-family: Tahoma; text-decoration: underline overline; color: darkslateblue; font-size: 50px;">BOOK STORE BILLING SYSTEM</h1>
+
+	<table border="3">
+		<form name="form1">
+			<tr bgcolor="lightseagreen" style="color: midnightblue; text-decoration: bold;">
+				<th colspan="1">
+					<label>BOOK NAME</label>
+				</th>
+
+				<th colspan="1">
+					<label>UNIT PRICE</label>
+				</th>
+
+				<th colspan="1">
+					<label>QUANTITY</label>
+				</th>
+
+				<th colspan="1">
+					<label>PRICE</label>
+				</th>
+			</tr>
+
+			<tr>
+				<th colspan="1">
+					<select name="books" id="book1" tabindex="1">
+						<option value="NA" selected disabled hidden>Book Name</option>
+						<option value="Korth">Korth</option>
+						<option value="Horowitz Sahani">Horowitz Sahani</option>
+						<option value="Harry Potter">Harry Potter</option>
+						<option value="Panchatantra">Panchatantra</option>
+						<option value="ML Agarwal">ML Agarwal</option>
+						<option value="RS Agarwal">RS Agarwal</option>
+						<option value="Galvin">Galvin</option>
+						<option value="Aesop's Fables">Aesop's Fables</option>
+						<option value="Aho Sethi">Aho Sethi</option>
+						<option value="SN Dey">SN Dey</option>
+					</select>
+				</th>
+
+				<th colspan="1">
+					<input type="number" value="0" name="unitprice1" id="unitprice1" readonly>
+				</th>
+
+				<th colspan="1">
+					<input type="number" value="0" id="quantity1" placeholder="Quantity" tabindex="2">
+				</th>
+
+				<th colspan="1">
+					<input type="number" value="0" id="price1" placeholder="Unit Price" readonly>
+				</th>
+			</tr>
+
+			<tr bgcolor="lightseagreen" style="color: midnightblue; text-decoration: bold;">
+				<th colspan="4">
+					<!--<button onclick="generateBill()" accesskey="B">
+						<b>B</b>ILL AMOUNT
+					</button>-->
+					<input type="button" value="BILL AMOUNT" onclick="generateBill()">
+				</th>
+			</tr>
+		</form>
+	</table>
+</body>
+</html>

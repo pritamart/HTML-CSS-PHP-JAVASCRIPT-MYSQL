@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slideshow</title>
+	<style>
+		h1 {
+			text-align: center;
+			font-family: Tahoma;
+			text-decoration: underline;
+			color: darkslateblue;
+			font-size: 60px;
+		}
+
+		body {
+			background-color: lightseagreen;
+		}
+
+		div {
+			width: 990px;
+			height: 500px;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-position: center center;
+			border: 4px solid skyblue;
+			background-color: lightgoldenrodyellow;
+			align-content: center;
+		}
+	</style>
+
+	<script type="text/javascript">
+		var images = new Array();
+		images[0] = "url('Img1.jpg')";
+		images[1] = "url('Img2.jpg')";
+		
+		images[2] = "url('Img3.jpg')";
+		images[3] = "url('Img4.jpg')";
+		images[4] = "url('Img5.jpg')";
+
+		var count = -1;
+
+		function slideShow() {
+			if(count < images.length-1)
+				count++;
+			else
+				count = 0;
+			document.getElementById('slide').style.backgroundImage = images[count];
+		}
+
+		window.onload = new Function('setInterval("slideShow()", 1000)');
+	</script>
+</head>
+<body>
+	<h1>Slideshow</h1>
+
+	<br><br>
+
+	<center>
+		<div id="slide"></div>
+	</center>
+</body>
+</html>

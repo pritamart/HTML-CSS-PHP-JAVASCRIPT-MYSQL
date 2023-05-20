@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	<h1>CALCULATOR</h1>
+	<br/>
+	<center><div id="Memory" style="display: none;">Memory</div></center>
+	<br><br>
+	<form name="calculatorform">
+		<table>
+			<tr>
+				<th colspan="4">
+					<input type="text" name="display" id="disp" value="0" style="text-align: right;">
+				</th>
+			</tr>
+			<tr>
+				<th colspan="1">
+					<input type="button" name="MR" value="MR" class="rowspan-one" onclick="memoryRecall()">
+				</th>
+				<th colspan="1">
+					<input type="button" name="MPlus" value="M+" class="rowspan-one" onclick="mPlus()">
+				</th><th colspan="1">
+					<input type="button" name="MMinus" value="M-" class="rowspan-one" onclick="mMinus()">
+				</th><th colspan="1">
+					<input type="button" name="MC" value="MC" class="rowspan-one" onclick="memoryClear()">
+				</th>
+			</tr>
+			<tr>
+				<th colspan="2">
+					<input type="button" name="AC" value="AC" class="rowspan-two" onclick="allClear();" style="color: red;">
+				</th>
+				<th colspan="1">
+					<input type="button" name="C" value="C" class="rowspan-one" onclick="backspace();">
+				</th>
+				<th colspan="1">
+					<input type="button" name="plus" value="+" class="rowspan-one" onclick="buttonPress('+')">
+				</th>
+			</tr>
+			<tr>
+				<th colspan="1">
+					<input type="button" name="one" value="1" class="rowspan-one" onclick="buttonPress('1')">
+				</th>
+				<th colspan="1">
+					<input type="button" name="two" value="2" class="rowspan-one" onclick="buttonPress('2')">
+				</th>
+				<th colspan="1">
+					<input type="button" name="three" value="3" class="rowspan-one" onclick="buttonPress('3')">
+				</th>
+				<th colspan="1">
+					<input type="button" name="minus" value="-" class="rowspan-one" onclick="buttonPress('-')">
+				</th>
+			</tr>
+			<tr>
+				<th colspan="1">
+					<input type="button" name="four" value="4" class="rowspan-one" onclick="buttonPress('4')">
+				</th>
+				<th colspan="1">
+					<input type="button" name="five" value="5" class="rowspan-one" onclick="buttonPress('5')">
+				</th>
+				<th colspan="1">
+					<input type="button" name="six" value="6" class="rowspan-one" onclick="buttonPress('6')">
+				</th>
+				<th colspan="1">
+					<input type="button" name="multp" value="*" class="rowspan-one" onclick="buttonPress('*')">
+				</th>
+			</tr>
+			<tr>
+				<th colspan="1">
+					<input type="button" name="seven" value="7" class="rowspan-one" onclick="buttonPress('7')">
+				</th>
+				<th colspan="1">
+					<input type="button" name="eight" value="8" class="rowspan-one" onclick="buttonPress('8')">
+				</th>
+				<th colspan="1">
+					<input type="button" name="nine" value="9" class="rowspan-one" onclick="buttonPress('9')">
+				</th>
+				<th colspan="1">
+					<input type="button" name="division" value="/" class="rowspan-one" onclick="buttonPress('/')">
+				</th>
+			</tr>
+			<tr>
+				<th colspan="1">
+					<input type="button" name="decimal" value="." class="rowspan-one" onclick="buttonPress('.')">
+				</th>
+				<th colspan="1">
+					<input type="button" name="zero" value="0" class="rowspan-one" onclick="buttonPress('0')">
+				</th>
+				<th colspan="2">
+					<input type="button" name="equal" value="=" class="rowspan-two" onclick="equals();">
+				</th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

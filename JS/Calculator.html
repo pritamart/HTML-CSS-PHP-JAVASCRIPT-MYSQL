@@ -1,0 +1,83 @@
+<html>
+<head>
+	<title>Calculator</title>
+	<script type="text/javascript">
+		function add() {
+			var a,b;
+			a=parseFloat(form1.a.value);
+			b=parseFloat(form1.b.value);
+
+			form1.o.value=a+b;
+		}
+
+		function subtract() {
+			var a,b;
+			a=parseFloat(form1.a.value);
+			b=parseFloat(form1.b.value);
+
+			form1.o.value=a-b;
+		}
+
+		function multiply() {
+			var a,b;
+			a=parseFloat(form1.a.value);
+			b=parseFloat(form1.b.value);
+
+			form1.o.value=a*b;
+		}
+
+		function divide(){
+			var a,b;
+			a=parseFloat(form1.a.value);
+			b=parseFloat(form1.b.value);
+
+			if(b==0){
+				alert("Division by zero not possible. Try again.");
+				refresh();
+			}
+			else{
+				form1.o.value=a/b;
+			}
+		}
+
+		function refresh() {
+			form1.a.value="";
+			form1.b.value="";
+			form1.o.value="";
+			document.getElementById("num1").focus();
+		}
+	</script>
+</head>
+<body bgcolor="lightgreen">
+	<h1 align="center"><u>CALCULATOR</u></h1>
+	<br/>
+	<form name="form1">
+		<table align="center">
+			<tr>
+				<td colspan="2">ENTER NO. 1</td>
+				<td colspan="2"><input type="number" name="a" id="num1" value="" size="10" autofocus></td>
+			</tr>
+			<tr>
+				<td colspan="2">ENTER NO. 2</td>
+				<td colspan="2"><input type="number" name="b" value="" size="10"></td>
+			</tr>
+			<tr>
+				<td colspan="2">OUTPUT</td>
+				<td colspan="2"><input type="number" name="o" value="" size="10"></td>
+			</tr>
+			<tr>
+				<td colspan="4"><hr width="100%" color="grey"></td>
+			</tr>
+			<tr align="center">
+				<td colspan="1"><input type="button" value="ADD" onclick="add();"></td>
+				<td colspan="1"><input type="button" value="SUB" onclick="subtract();"></td>
+				<td colspan="1"><input type="button" value="MUL" onclick="multiply();"></td>
+				<td colspan="1"><input type="button" value="DIV" onclick="divide();"></td>
+			</tr>
+			<tr align="center">
+				<td colspan="4"><input type="button" value="RESET" onclick="refresh();"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

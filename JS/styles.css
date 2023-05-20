@@ -1,0 +1,44 @@
+h1 {
+	text-align: center;
+	text-decoration: underline;	
+	color: black;
+	background-color: lightseagreen;
+	font-size: 60px;
+}
+
+body {
+	background: darkslategrey;
+}
+
+.rowspan-one {
+	width: 150px;
+}
+
+.rowspan-two {
+	width: 305px;
+}
+
+table {
+	width: 150px;
+	height: 40px;
+	margin: auto;
+	border: 4px solid skyblue;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: lightseagreen;
+}
+
+input {
+	border-radius: 25px;
+	font-size: 50px;
+	background-color: lightgoldenrodyellow;
+}
+
+div {
+	width: 150px;
+	border: 2px solid skyblue;
+	border-radius: 5px;
+	background-color: lightgoldenrodyellow;
+	color: black;
+	font-size: 20px;
+}

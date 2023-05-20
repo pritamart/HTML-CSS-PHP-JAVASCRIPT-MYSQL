@@ -1,0 +1,48 @@
+PHP script explained:
+
+$target_dir = "uploads/" - specifies the directory where the file is going to be placed
+$target_file specifies the path of the file to be uploaded
+
+The global predefined variable $_FILES is an associative array containing items uploaded via HTTP POST method. Uploading a file requires HTTP POST method form with enctype attribute set to multipart/form-data.$_FILES['file']['name']
+
+PHP basename() function: Returns filename from the specified path
+PHP pathinfo() function: Get information about a file path
+getimagesize() function: In-built function used to get the size of an image. This function accepts the filename as a parameter and determines the image size and returns the dimensions with the file type and height/width of image.
+
+$imageFileType holds the file extension of the file (in lower case)
+Next, check if the image file is an actual image.
+Note: You will need to create a new directory called "uploads" in the directory where "Upload.php" file resides. The uploaded files will be saved there.
+
+
+Checking if file already exists:
+First, we will check if the file already exists in the "uploads" folder.
+If it does, an error message is displayed, and $uploadOk is set to 0:
+
+if (file_exists($target_file)) {
+	echo "Sorry, file already exists.";
+	$uploadOk = 0;
+}
+
+
+Limit file size:
+The file input field in HTML form is named "fileToUpload".
+Now, we want to check the size of the file. If the file is larger than 500 KN, an error message is displayed, and $uploadOk is set to 0.
+
+
+Check file size:
+if ($_FILES['fileToUpload']['size'] > 500000) {
+	echo "Sorry, your file is too large";
+	$uploadOk = 0;
+}
+
+
+Limit file type:
+The code below only allows users to upload JPG, JPEG, PNG and GIF files. All other file types give an error message before setting $uploadOk to 0.
+
+
+
+Allow certain file formats:
+if ($imageFileType != 'jpg' && $imageFileType != 'png' && $imageFileType != 'jpeg' && $imageFileType != 'gif') {
+	echo "Sorry, only JPG, JPEG, PNG and GIF files are allowed.";
+	$uploadOk = 0;
+}

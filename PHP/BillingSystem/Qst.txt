@@ -1,0 +1,9 @@
+Using HTML and PHP design a BILLING SYSTEM IN A SUPERSTORE with the following features:
+
+The application will accept the names of the different items along with the prices in a text box.
+
+A discount of 20% is applied if the bill amount crosses Rs. 5000; if the amount is greater than 3000 then a discount of 15% is applied; if the bill amount is greater than 1500, a discount of 10% is given; else a discount of 5% is applied.
+
+The entire application should be made in such a way so that the user can run it with keyboard only, implementing tabindex, keypress and accesskeys. The form should have at least 8 items on the menu. On activating/clicking the button "BILL AMOUNT", the amount of the bill will be displayed along with the discount value in a HTML page.
+
+Also, write the final bill amount in a file (Bill.txt)

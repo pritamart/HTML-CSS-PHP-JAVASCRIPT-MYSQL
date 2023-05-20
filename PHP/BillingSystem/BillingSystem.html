@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BILLING SYSTEM</title>
+	<style>
+		table {
+			margin: auto;
+			width: 990px;
+			border: 4px solid skyblue;
+			padding: 5px;
+			background-color: lightgoldenrodyellow;
+			font-weight: bold;
+			border-radius: 10px;
+			font-size: 20px;
+		}
+
+		body {
+			background-color: lightseagreen;
+		}
+
+		button {
+			border-radius: 7px;
+			background-color: lightgoldenrodyellow;
+			font-family: Tahoma;
+			font-size: 20px;
+		}
+
+		input {
+			font-weight: bold;
+		}
+
+		select {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1 style="text-align: center; font-family: Tahoma; text-decoration: underline overline; color: darkslateblue; font-size: 50px;">SUPERSTORE BILLING SYSTEM</h1>
+
+	<table border="3">
+		<form action="BillingSystem.php" method="POST">
+			<tr bgcolor="lightseagreen" style="color: midnightblue; text-decoration: bold;">
+				<th colspan="1">
+					<label>ITEM NAME</label>
+				</th>
+
+				<th colspan="1">
+					<label>UNIT PRICE</label>
+				</th>
+
+				<th colspan="1">
+					<label>QUANTITY</label>
+				</th>
+			</tr>
+
+			<!--ITEM1-->
+			<tr>
+				<th colspan="1">
+					<select name="item1" tabindex="1">
+						<option value="NA" selected disabled hidden>Item Name</option>
+						<option value="Maggi">Maggi</option>
+						<option value="Sunflower Oil">Sunflower Oil</option>
+						<option value="Marie">Marie</option>
+						<option value="Bourbon">Bourbon</option>
+						<option value="Cake">Cake</option>
+						<option value="Coca Cola">Coca Cola</option>
+						<option value="Spices">Spices</option>
+					</select>
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="unitprice1" value="0">
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="quantity1" value="0">
+				</th>
+			</tr>
+
+			<!--ITEM2-->
+			<tr>
+				<th colspan="1">
+					<select name="item2" tabindex="1">
+						<option value="NA" selected disabled hidden>Item Name</option>
+						<option value="Maggi">Maggi</option>
+						<option value="Sunflower Oil">Sunflower Oil</option>
+						<option value="Marie">Marie</option>
+						<option value="Bourbon">Bourbon</option>
+						<option value="Cake">Cake</option>
+						<option value="Coca Cola">Coca Cola</option>
+						<option value="Spices">Spices</option>
+					</select>
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="unitprice2" value="0">
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="quantity2" value="0">
+				</th>
+			</tr>
+
+			<!--ITEM3-->
+			<tr>
+				<th colspan="1">
+					<select name="item3" tabindex="1">
+						<option value="NA" selected disabled hidden>Item Name</option>
+						<option value="Maggi">Maggi</option>
+						<option value="Sunflower Oil">Sunflower Oil</option>
+						<option value="Marie">Marie</option>
+						<option value="Bourbon">Bourbon</option>
+						<option value="Cake">Cake</option>
+						<option value="Coca Cola">Coca Cola</option>
+						<option value="Spices">Spices</option>
+					</select>
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="unitprice3" value="0">
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="quantity3" value="0">
+				</th>
+			</tr>
+
+			<!--ITEM4-->
+			<tr>
+				<th colspan="1">
+					<select name="item4" tabindex="1">
+						<option value="NA" selected disabled hidden>Item Name</option>
+						<option value="Maggi">Maggi</option>
+						<option value="Sunflower Oil">Sunflower Oil</option>
+						<option value="Marie">Marie</option>
+						<option value="Bourbon">Bourbon</option>
+						<option value="Cake">Cake</option>
+						<option value="Coca Cola">Coca Cola</option>
+						<option value="Spices">Spices</option>
+					</select>
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="unitprice4" value="0">
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="quantity4" value="0">
+				</th>
+			</tr>
+
+			<!--ITEM5-->
+			<tr>
+				<th colspan="1">
+					<select name="item5" tabindex="1">
+						<option value="NA" selected disabled hidden>Item Name</option>
+						<option value="Maggi">Maggi</option>
+						<option value="Sunflower Oil">Sunflower Oil</option>
+						<option value="Marie">Marie</option>
+						<option value="Bourbon">Bourbon</option>
+						<option value="Cake">Cake</option>
+						<option value="Coca Cola">Coca Cola</option>
+						<option value="Spices">Spices</option>
+					</select>
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="unitprice5" value="0">
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="quantity5" value="0">
+				</th>
+			</tr>
+
+			<!--ITEM6-->
+			<tr>
+				<th colspan="1">
+					<select name="item6" tabindex="1">
+						<option value="NA" selected disabled hidden>Item Name</option>
+						<option value="Maggi">Maggi</option>
+						<option value="Sunflower Oil">Sunflower Oil</option>
+						<option value="Marie">Marie</option>
+						<option value="Bourbon">Bourbon</option>
+						<option value="Cake">Cake</option>
+						<option value="Coca Cola">Coca Cola</option>
+						<option value="Spices">Spices</option>
+					</select>
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="unitprice6" value="0">
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="quantity6" value="0">
+				</th>
+			</tr>
+
+			<!--ITEM7-->
+			<tr>
+				<th colspan="1">
+					<select name="item7" tabindex="1">
+						<option value="NA" selected disabled hidden>Item Name</option>
+						<option value="Maggi">Maggi</option>
+						<option value="Sunflower Oil">Sunflower Oil</option>
+						<option value="Marie">Marie</option>
+						<option value="Bourbon">Bourbon</option>
+						<option value="Cake">Cake</option>
+						<option value="Coca Cola">Coca Cola</option>
+						<option value="Spices">Spices</option>
+					</select>
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="unitprice7" value="0">
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="quantity7" value="0">
+				</th>
+			</tr>
+
+			<!--ITEM8-->
+			<tr>
+				<th colspan="1">
+					<select name="item8" tabindex="1">
+						<option value="NA" selected disabled hidden>Item Name</option>
+						<option value="Maggi">Maggi</option>
+						<option value="Sunflower Oil">Sunflower Oil</option>
+						<option value="Marie">Marie</option>
+						<option value="Bourbon">Bourbon</option>
+						<option value="Cake">Cake</option>
+						<option value="Coca Cola">Coca Cola</option>
+						<option value="Spices">Spices</option>
+					</select>
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="unitprice8" value="0">
+				</th>
+
+				<th colspan="1">
+					<input type="number" name="quantity8" value="0">
+				</th>
+			</tr>
+
+			<tr bgcolor="lightseagreen" style="color: midnightblue; text-decoration: bold;">
+				<th colspan="2">
+					<button type="SUBMIT" accesskey="G">
+						<b>G</b>ENERATE BILL
+					</button>
+				</th>
+
+				<th colspan="2">
+					<button type="RESET" accesskey="R">
+						<b>R</b>ESET
+					</button>
+				</th>
+			</tr>
+		</form>
+	</table>
+</body>
+</html>

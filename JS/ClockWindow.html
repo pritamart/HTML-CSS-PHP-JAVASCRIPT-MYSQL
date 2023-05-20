@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clock Window</title>
+	<script type="text/javascript">
+		function openClock() {
+			w = screen.width/2 - 100;
+			h = screen.height/2 - 100;
+			myWin = open("Clock.html", "_blank", "width = 550, height = 550");
+			myWin.moveTo(w, h);
+			window.close();
+		}
+	</script>
+</head>
+<body bgcolor="lightgreen">
+	<center>
+		<h1><u>Clock Window</u></h1>
+		<button onclick="openClock()">Show clock</button>
+	</center>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fibonacci Numbers</title>
+	<style>
+		h1 {
+			text-align: center;
+			font-family: Tahoma;
+			text-decoration: underline;
+			color: darkslateblue;
+			font-size: 60px;
+		}
+
+		body {
+			background-color: lightseagreen;
+		}
+
+		table {
+			border: 4px solid skyblue;
+			padding: 5px;
+			background-color: lightgoldenrodyellow;
+			font-weight: bold;
+			border-radius: 10px;
+			font-size: 20px;
+			text-align: center;
+		}
+
+		#button {
+			border-radius: 7px;
+			background-color: lightgoldenrodyellow;
+			font-family: Tahoma;
+			font-size: 20px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function getFibo() {
+			var a = 0, b = 1, c, n = parseInt(form1.num.value);
+			var fibo = "";
+
+			while(b<=n) {
+				c = a+b;
+				a = b;
+				b = c;
+
+				fibo += "\t" + a;
+			}
+			document.getElementById("displayTable").style.display = "block";
+			document.getElementById("fibonum").innerHTML = fibo
+		}
+	</script>
+</head>
+<body>
+	<h1 align="center">Fibonacci Numbers</h1>
+
+	<table align="center">
+		<form name="form1">
+			<tr>
+				<td align="right">
+					Enter n<font color="red">*</font>:
+				</td>
+				<td align="left">
+					<input type="number" name="n" placeholder="0" size="3" id="num" required>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<hr color="blue">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" id="button" value="Get Fibo!" onclick="getFibo()">
+				</td>
+			</tr>
+		</form>
+	</table>
+
+	<br><br>
+
+	<table id="displayTable" style="display: none;" align="center" width="20%">
+		<tr>
+			<th align="center" colspan="1">
+				<h2>Fibonacci numbers generated:</h2>
+			</th>
+		</tr>
+		<tr>
+			<th align="center" colspan="1">
+				<div id="fibonum"></div>
+			</th>
+		</tr>
+	</table>
+</body>
+<footer>
+	Anweshan Mukherjee
+</footer>
+</html>

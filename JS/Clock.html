@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>12-hour clock</title>
+	<style type="text/css">
+		div
+		{
+			background-color: navy;
+			color: purple;
+			padding: 25px;
+			margin: 25px;
+			text-align: center;
+			position: absolute;
+    		top: 50%;
+    		left: 50%;
+    		margin-top: -50px;
+    		margin-left: -50px;
+    		color: white;
+    		border: 6px solid DodgerBlue;
+    		font-size: 27px;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function showTime() {
+			d = new Date();
+			var hrs = d.getHours();
+			var min = d.getMinutes();
+			var sec = d.getSeconds();
+			var ampm = "";
+			var message = "";
+
+			if (hrs < 12)
+				message = "Good Morning! :)";
+			else if(hrs > 12 && hrs < 15)
+				message = "Good Afternoon! :)";
+			else
+				message = "Good Evening! :)";
+			
+			if (hrs > 12) {
+				hrs = hrs - 12;
+				ampm = "PM";
+			}
+			else {
+				ampm = "AM";
+			}
+
+			if (hrs == 0)
+				hrs = "12";
+
+			if (hrs < 10)
+				hrs = "0" + hrs;
+
+			if (min < 10)
+				min = "0" + min;
+
+			if (sec < 10)
+				sec = "0" + sec;
+
+			document.getElementById('message').innerHTML = message;
+
+			document.getElementById("time").innerHTML = hrs + ":" + min + ":" + sec + " " + ampm;
+    		setTimeout("showTime()", 1000);
+		}
+	</script>
+</head>
+<body bgcolor="gold" onload="showTime()">
+	<div style="top: 35%; left: 46%; background-color: darkgreen; border: 6px solid black;" id="message"></div>
+	<div id="time"></div>
+</body>
+</html>

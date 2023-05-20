@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marksheet</title>
+	<style>
+	table {
+		margin: auto;
+		width: 1000px;
+		border: 4px solid skyblue;
+		padding: 5px;
+		background-color: lightgoldenrodyellow;
+		font-weight: bold;
+		border-radius: 10px;
+		font-size: 20px;
+	}
+
+	body {
+		background-color: lightseagreen;
+	}
+
+	button {
+		border-radius: 7px;
+		background-color: lightgoldenrodyellow;
+		font-family: Tahoma;
+		font-size: 20px;
+	}
+
+	input {
+		font-weight: bold;
+	}
+
+	select {
+		font-weight: bold;
+	}
+	</style>
+
+	<script type="text/javascript">
+		function getResults() {
+			var marks;
+
+			marks = (100*parseFloat(document.getElementById("marks1").value)/parseFloat(document.getElementById("fm1").value)).toFixed(2);
+			document.getElementById("percent1").value = marks;
+
+			marks = (100*parseFloat(document.getElementById("marks2").value)/parseFloat(document.getElementById("fm2").value)).toFixed(2);
+			document.getElementById("percent2").value = marks;
+
+			marks = (100*parseFloat(document.getElementById("marks3").value)/parseFloat(document.getElementById("fm3").value)).toFixed(2);
+			document.getElementById("percent3").value = marks;
+
+			marks = (100*parseFloat(document.getElementById("marks4").value)/parseFloat(document.getElementById("fm4").value)).toFixed(2);
+			document.getElementById("percent4").value = marks;
+		}
+
+		function refresh() {
+			document.getElementById("marks1").value = "";
+			document.getElementById("marks2").value = "";
+			document.getElementById("marks3").value = "";
+			document.getElementById("marks4").value = "";
+
+			document.getElementById("fm1").value = "100";
+			document.getElementById("fm2").value = "100";
+			document.getElementById("fm3").value = "100";
+			document.getElementById("fm4").value = "100";
+
+			document.getElementById("percent1").value = "";
+			document.getElementById("percent2").value = "";
+			document.getElementById("percent3").value = "";
+			document.getElementById("percent4").value = "";
+
+			document.getElementById("msub1").value = "";
+			document.getElementById("mmark1").value = "";
+			document.getElementById("mfm1").value = "";
+			document.getElementById("mp1").value = "";
+			document.getElementById("mstatus1").value = "";	
+
+			document.getElementById("msub2").value = "";
+			document.getElementById("mmark2").value = "";
+			document.getElementById("mfm2").value = "";
+			document.getElementById("mp2").value = "";
+			document.getElementById("mstatus2").value = "";	
+
+			document.getElementById("msub3").value = "";
+			document.getElementById("mmark3").value = "";
+			document.getElementById("mfm3").value = "";
+			document.getElementById("mp3").value = "";
+			document.getElementById("mstatus3").value = "";
+
+			document.getElementById("msub4").value = "";
+			document.getElementById("mmark4").value = "";
+			document.getElementById("mfm4").value = "";
+			document.getElementById("mp4").value = "";
+			document.getElementById("mstatus4").value = "";
+
+			document.getElementById("marksheet").style.display="none";
+		}
+
+		function getMarksheet() {
+			document.getElementById("marksheet").style.display="block";
+
+			document.getElementById("msub1").innerHTML = document.getElementById("sub1").value;
+			document.getElementById("mmark1").innerHTML = document.getElementById("marks1").value;
+			document.getElementById("mfm1").innerHTML = document.getElementById("fm1").value;
+			document.getElementById("mp1").innerHTML = document.getElementById("percent1").value;
+			if(parseFloat(document.getElementById("percent1").value) < 40) {
+				document.getElementById("mstatus1").style.color = "red";
+				document.getElementById("mstatus1").innerHTML = "ARREAR";
+			}
+			else {
+				document.getElementById("mstatus1").style.color = "green";
+				document.getElementById("mstatus1").innerHTML = "PASS";
+			}
+
+			document.getElementById("msub2").value = document.getElementById("sub2").value;
+			document.getElementById("mmark2").value = document.getElementById("marks2").value;
+			document.getElementById("mfm2").value = document.getElementById("fm2").value;
+			document.getElementById("mp2").value = document.getElementById("percent2").value;
+			if(parseFloat(document.getElementById("percent2").value) < 40) {
+				document.getElementById("mstatus2").style.color = "red";
+				document.getElementById("mstatus2").value = "ARREAR";
+			}
+			else {
+				document.getElementById("mstatus2").style.color = "green";
+				document.getElementById("mstatus2").value = "PASS";
+			}
+
+			document.getElementById("msub3").value = document.getElementById("sub3").value;
+			document.getElementById("mmark3").value = document.getElementById("marks3").value;
+			document.getElementById("mfm3").value = document.getElementById("fm3").value;
+			document.getElementById("mp3").value = document.getElementById("percent3").value;
+			if(parseFloat(document.getElementById("percent3").value) < 40) {
+				document.getElementById("mstatus3").style.color = "red";
+				document.getElementById("mstatus3").value = "ARREAR";
+			}
+			else {
+				document.getElementById("mstatus3").style.color = "green";
+				document.getElementById("mstatus3").value = "PASS";
+			}
+
+			document.getElementById("msub4").value = document.getElementById("sub4").value;
+			document.getElementById("mmark4").value = document.getElementById("marks4").value;
+			document.getElementById("mfm4").value = document.getElementById("fm4").value;
+			document.getElementById("mp4").value = document.getElementById("percent4").value;
+			if(parseFloat(document.getElementById("percent4").value) < 40) {
+				document.getElementById("mstatus4").style.color = "red";
+				document.getElementById("mstatus4").value = "ARREAR";
+			}
+			else {
+				document.getElementById("mstatus4").style.color = "green";
+				document.getElementById("mstatus4").value = "PASS";
+			}
+
+			document.getElementById("finalpercent").value = ((parseFloat(document.getElementById("percent1").value) + parseFloat(document.getElementById("percent2").value) + parseFloat(document.getElementById("percent3").value) + parseFloat(document.getElementById("percent4").value))/4).toFixed(2);
+
+			var percent = parseFloat(document.getElementById("finalpercent").value);
+
+			if (percent >= 90)
+				document.getElementById("grade").value = "A";
+			else if (percent >= 80)
+				document.getElementById("grade").value = "B";
+			else if (percent >= 70)
+				document.getElementById("grade").value = "C";
+			else if (percent >= 60)
+				document.getElementById("grade").value = "D";
+			else if (percent >= 40)
+				document.getElementById("grade").value = "E";
+			else
+				document.getElementById("grade").value = "F";
+		}
+
+		function printMarksheet() {
+			var markPrint = window.open("");
+			var printTable = document.getElementById("m1").innerHTML;
+			//printTable.getElementById("msub1").value = "Hello";
+			markPrint.document.write(printTable);
+			markPrint.print();
+		}
+	</script>
+</head>
+<body>
+	<h1 style="text-align: center; font-family: Tahoma; text-decoration: underline overline; color: darkslateblue; font-size: 60px;">MARKSHEET</h1>
+	<table border="1">
+		<tr bgcolor="lightseagreen" style="color: white; text-decoration: bold;">
+			<th colspan="1">
+				SUBJECT
+			</th>
+			<th colspan="1">
+				MARKS OBTAINED
+			</th>
+			<th colspan="1">
+				FULL MARKS
+			</th>
+			<th colspan="1">
+				PERCENTAGE
+			</th>
+		</tr>
+
+		<tr>
+			<th colspan="1">
+				<select name="subjects" id="sub1">
+					<option value="NA" selected disabled hidden>Subject</option>
+					<option value="Advanced Computer Networks">Advanced Computer Networks</option>
+					<option value="Compiler Design">Compiler Design</option>
+					<option value="Internet Technology">Internet Technology</option>
+					<option value="Microcontroller">Microcontroller</option>
+				</select>
+			</th>
+
+			<th colspan="1">
+				<input type="number" id="marks1" placeholder="Marks obtained">
+			</th>
+
+			<th colspan="1">
+				<input type="number" id="fm1" value="100">
+			</th>
+
+			<th colspan="1">
+				<input type="number" id="percent1" value="Percentage" readonly>
+			</th>
+		</tr>
+
+		<tr>
+			<th colspan="1">
+				<select name="subjects" id="sub2">
+					<option value="NA" selected disabled hidden>Subject</option>
+					<option value="Advanced Computer Networks">Advanced Computer Networks</option>
+					<option value="Compiler Design">Compiler Design</option>
+					<option value="Internet Technology">Internet Technology</option>
+					<option value="Microcontroller">Microcontroller</option>
+				</select>
+			</th>
+
+			<th colspan="1">
+				<input type="number" name="marks2" id="marks2" placeholder="Marks obtained">
+			</th>
+
+			<th colspan="1">
+				<input type="number" name="fm2" id="fm2" value="100">
+			</th>
+
+			<th colspan="1">
+				<input type="number" name="percent2" id="percent2" value="Percentage" readonly>
+			</th>
+		</tr>
+
+		<tr>
+			<th colspan="1">
+				<select name="subjects" id="sub3">
+					<option value="NA" selected disabled hidden>Subject</option>
+					<option value="Advanced Computer Networks">Advanced Computer Networks</option>
+					<option value="Compiler Design">Compiler Design</option>
+					<option value="Internet Technology">Internet Technology</option>
+					<option value="Microcontroller">Microcontroller</option>
+				</select>
+			</th>
+
+			<th colspan="1">
+				<input type="number" name="marks3" id="marks3" placeholder="Marks obtained">
+			</th>
+
+			<th colspan="1">
+				<input type="number" name="fm3" id="fm3" value="100">
+			</th>
+
+			<th colspan="1">
+				<input type="number" name="percent3" id="percent3" value="Percentage" readonly>
+			</th>
+		</tr>
+
+		<tr>
+			<th colspan="1">
+				<select name="subjects" id="sub4">
+					<option value="NA" selected disabled hidden>Subject</option>
+					<option value="Advanced Computer Networks">Advanced Computer Networks</option>
+					<option value="Compiler Design">Compiler Design</option>
+					<option value="Internet Technology">Internet Technology</option>
+					<option value="Microcontroller">Microcontroller</option>
+				</select>
+			</th>
+
+			<th colspan="1">
+				<input type="number" name="marks4" id="marks4" placeholder="Marks obtained">
+			</th>
+
+			<th colspan="1">
+				<input type="number" name="fm4" id="fm4" value="100">
+			</th>
+
+			<th colspan="1">
+				<input type="number" name="percent4" id="percent4" value="Percentage" readonly>
+			</th>
+		</tr>
+
+		<tr></tr>
+
+		<tr bgcolor="lightseagreen">
+			<th colspan="1">
+				<button onclick="getResults()">
+					Results
+				</button>
+			</th>
+
+			<th>
+				<button onclick="getMarksheet()">
+					Marksheet
+				</button>
+			</th>
+
+			<th>
+				<button onclick="printMarksheet()">
+					Print
+				</button>
+			</th>
+
+			<th colspan="1">
+				<button onclick="refresh()">
+					Reset
+				</button>
+			</th>
+		</tr>
+	</table>
+
+	<br><br>
+
+	<div id="m1">
+	<table id="marksheet" style="display: none; padding: 0px; text-align: center;">
+		<tr style="font-size: 30px;">
+			<th colspan="5">
+				MARKSHEET
+			</th>
+		</tr>
+
+		<tr>
+			<th colspan="1">
+				SUBJECT
+			</th>
+
+			<th colspan="1">
+				MARKS OBTAINED
+			</th>
+
+			<th colspan="1">
+				FULL MARKS
+			</th>
+
+			<th colspan="1">
+				PERCENTAGE
+			</th>
+
+			<th colspan="1">
+				STATUS
+			</th>
+		</tr>
+		<tr style="font-size: 15px;">
+			<th colspan="1">
+				<div id="msub1"></div>
+			</th>
+
+			<th colspan="1">
+				<div id="mmark1"></div>
+			</th>
+
+			<th colspan="1">
+				<div id="mfm1"></div>
+			</th>
+
+			<th colspan="1">
+				<div id="mp1"></div>
+			</th>
+
+			<th colspan="1">
+				<div id="mstatus1"></div>
+			</th>
+		</tr>
+
+		<tr>
+			<th colspan="1">
+				<input type="text" id="msub2" readonly>
+			</th>
+
+			<th colspan="1">
+				<input type="text" id="mmark2" readonly>
+			</th>
+
+			<th colspan="1">
+				<input type="text" id="mfm2" readonly>
+			</th>
+
+			<th colspan="1">
+				<input type="text" id="mp2" readonly>
+			</th>
+
+			<th colspan="1">
+				<input type="text" id="mstatus2" readonly>
+			</th>
+		</tr>
+
+		<tr>
+			<th colspan="1">
+				<input type="text" id="msub3" readonly>
+			</th>
+
+			<th colspan="1">
+				<input type="text" id="mmark3" readonly>
+			</th>
+
+			<th colspan="1">
+				<input type="text" id="mfm3" readonly>
+			</th>
+
+			<th colspan="1">
+				<input type="text" id="mp3" readonly>
+			</th>
+
+			<th colspan="1">
+				<input type="text" id="mstatus3" readonly>
+			</th>
+		</tr>
+
+		<tr>
+			<th colspan="1">
+				<input type="text" id="msub4" readonly>
+			</th>
+
+			<th colspan="1">
+				<input type="text" id="mmark4" readonly>
+			</th>
+
+			<th colspan="1">
+				<input type="text" id="mfm4" readonly>
+			</th>
+
+			<th colspan="1">
+				<input type="text" id="mp4" readonly>
+			</th>
+
+			<th colspan="1">
+				<input type="text" id="mstatus4" readonly>
+			</th>
+		</tr>
+
+		<tr>
+			<th colspan="5">
+				PERCENTAGE: <input type="text" id="finalpercent" maxlength="5" size="5">
+			</th>
+		</tr>
+
+		<tr>
+			<th colspan="5">
+				GRADE: <input type="text" id="grade" maxlength="2" size="1">
+			</th>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>

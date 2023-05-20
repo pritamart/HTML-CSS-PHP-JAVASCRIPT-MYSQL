@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payslip</title>
+	<script type="text/javascript">
+		function calculate() {
+			var basic = parseInt(form1.basic.value);
+
+			var da = basic * 0.3;
+			var hra = basic * 0.15;
+			var pf = basic * 0.12;
+			var gross = basic  + da + hra + pf + 500;
+			var net = gross - pf;
+
+			form1.da.value = da;
+			form1.hra.value = hra;
+			form1.pf.value = pf;
+			form1.gross.value = gross;
+			form1.net.value = net;
+
+		}
+	</script>
+</head>
+<body bgcolor="lightgreen">
+	<h1><center>Payslip</center></h1>
+	<center><hr color="black"></center>
+
+	<center>
+		<form name="form1">
+			<table align="center" cellspacing="8" width="60%">
+				<tr align="center">
+					<th colspan="2" align="right">
+						<label><b>Employee Name: </b></label>
+					</th>
+
+					<th colspan="2" align="left">
+						<input type="text" name="empname" value="" placeholder="Name">
+					</th>
+				</tr>
+
+				<tr>
+					<th colspan="2" align="right">
+						<label><b>Basic Salary: </b></label>
+					</th>
+
+					<th colspan="2" align="left">
+						₹ <input type="number" name="basic" value="" placeholder="0.0">
+					</th>
+				</tr>
+
+				<tr>
+					<th colspan="2">
+						<input type="button" value="Calculate" onclick="calculate()">
+					</th>
+
+					<th colspan="2">
+						<input type="reset" value="Reset">
+					</th>
+				</tr>
+
+				<tr>
+					<th colspan="4">
+						<hr color="black">
+					</th>
+				</tr>
+
+				<tr>
+					<th colspan="1" align="right">
+						<label><b>Dearness Allowance (D.A.): </b></label>
+					</th>
+
+					<th colspan="1" align="left">
+						₹ <input type="text" name="da" value="" size="10" placeholder="0.0">
+					</th>
+
+					<th colspan="1" align="right">
+						<label><b>House Rental Allowance (H.R.A.): </b></label>
+						
+					</th>
+
+					<th colspan="1" align="left">
+						₹ <input type="text" name="hra" value="" size="10" placeholder="0.0">
+					</th>
+				</tr>
+
+				<tr>
+					<th colspan="1" align="right">
+						<label><b>Provident Fund (P.F.): </b></label>
+					</th>
+
+					<th colspan="1" align="left">
+						₹ <input type="text" name="pf" value="" size="10" placeholder="0.0">
+					</th>					
+
+					<th colspan="1" align="right">
+						<label><b>Fixed Medical Allowance: </b></label>
+					</th>
+
+					<th colspan="1" align="left">
+						₹ <input type="text" name="medical" value="500" size="10">
+					</th>
+				</tr>
+
+				<tr>
+					<th colspan="4">
+						<label><b>Gross Salary: </b></label>
+						₹ <input type="text" name="gross" value="" size="10" placeholder="0.0">
+					</th>
+				</tr>
+
+				<tr>
+					<th colspan="4">
+						<label><b>Net Salary: </b></label>
+						₹ <input type="text" name="net" value="" size="10" placeholder="0.0">
+					</th>
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
