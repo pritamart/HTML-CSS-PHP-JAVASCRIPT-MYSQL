@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light</title>
+</head>
+<body> <center>
+
+    <h1>Light off and on</h1>
+    <button id="on" onclick="lighton()">Turn on the light</button>
+    <img src="img/pic_bulboff.gif" alt="on" id="bulb">
+    <button id="off" onclick="lightoff()">Turn off the light</button>
+    <div class="comment"></div>
+</center>
+</body>
+<script>
+    function lighton() {
+        document.getElementById('bulb').src='img/pic_bulbon.gif';   
+        document.getElementsByTagName('h1')[0].style.fontSize = "45px";
+        document.getElementsByClassName('comment')[0].innerHTML = "LIGHT is ON";
+    }
+    function lightoff() {
+        document.getElementsByClassName('comment')[0].innerHTML = "LIGHT is OFF";
+        document.getElementsByTagName('h1')[0].style.fontSize = "35px";
+        document.getElementById('bulb').src='img/pic_bulboff.gif';
+    }
+</script>
+</html>
